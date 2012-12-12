@@ -45,7 +45,7 @@ public class XmlTag {
 	public AbstractSequentialList<XmlTag> children = new LinkedList<XmlTag>();
 
 	/**
-	 * Tag contents which are not child tags, i.e. <tag>content</tag>. If a tag
+	 * Tag contents which are not child tags, i.e. \<tag\>content\</tag\>. If a tag
 	 * has content and child tags mixed all the content will be aggregated here
 	 * in one unit.
 	 */
@@ -53,7 +53,7 @@ public class XmlTag {
 
 	/**
 	 * If this tag is singleton. That is, it doesn't have a closing tag, for
-	 * instance <emptytag />
+	 * instance \<emptytag /\>
 	 */
 	public boolean empty = false;
 
