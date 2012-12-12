@@ -51,7 +51,7 @@
 				<version>0.7</version>
 				<configuration>
 					<message>Creating Javadocs for ${project.version}</message>
-					<repositoryName>JavaXmlToJson</repositoryName>
+					<repositoryName>jpurexml</repositoryName>
 					<repositoryOwner>asilvestre</repositoryOwner>
 				</configuration>
 				<executions>
