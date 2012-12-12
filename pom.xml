@@ -52,7 +52,7 @@
 				<configuration>
 					<message>Creating Javadocs for ${project.version}</message>
 					<repositoryName>JavaXmlToJson</repositoryName>
-					<repositoryOwner>antonisilvestre</repositoryOwner>
+					<repositoryOwner>asilvestre</repositoryOwner>
 				</configuration>
 				<executions>
 					<execution>
