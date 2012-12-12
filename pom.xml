@@ -3,11 +3,17 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.asilvestre</groupId>
 	<artifactId>jpurexml</artifactId>
-	<version>0.9</version>
+	<version>0.9-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>jpurexml</name>
 	<url>https://github.com/asilvestre/jpurexml</url>
 	<description>Simple all-in-memory XML parser coded in pure Java code so tools like Google's PlayN can transcompile it to all its target platforms</description>
+
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
 
 	<licenses>
 		<license>
@@ -18,8 +24,9 @@
 	</licenses>
 
 	<scm>
-		<url>scm:git:https://github.com/asilvestre/jpurexml.git</url>
-		<connection>scm:git:https://github.com/asilvestre/jpurexml.git</connection>
+		<connection>scm:git:git@github.com:asilvestre/jpurexml.git</connection>
+		<developerConnection>scm:git:git@github.com:asilvestre/jpurexml.git</developerConnection>
+		<url>git@github.com:asilvestre/jpurexml.git</url>
 	</scm>
 
 	<developers>
