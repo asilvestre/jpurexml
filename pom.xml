@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.asilvestre</groupId>
 	<artifactId>jpurexml</artifactId>
-	<version>0.10-SNAPSHOT</version>
+	<version>0.10</version>
 	<packaging>jar</packaging>
 	<name>jpurexml</name>
 	<url>https://github.com/asilvestre/jpurexml</url>
