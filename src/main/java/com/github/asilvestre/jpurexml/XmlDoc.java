@@ -33,7 +33,7 @@ public class XmlDoc {
 
 	@Override
 	public String toString() {
-		String res = String.format("%s%s", prologue.toString(), root.toString());
+		String res = prologue.toString() + root.toString();
 
 		return res;
 	}

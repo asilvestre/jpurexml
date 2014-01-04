@@ -36,8 +36,8 @@ public class Utils {
 		int replacePos = input.indexOf(toReplace);
 		while (replacePos != -1)
 		{
-			res = String.format("%s%s%s", res.substring(0, replacePos), replacement,
-					res.substring(replacePos + toReplace.length()));
+			res = res.substring(0, replacePos)+ replacement+
+					res.substring(replacePos + toReplace.length());
 			
 			replacePos = res.indexOf(toReplace, replacePos + replacement.length());
 		}

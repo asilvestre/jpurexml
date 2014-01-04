@@ -63,7 +63,7 @@ public class XmlParser {
 				throw new XmlParseException("Missing comment ending '-->'", commentPos);
 			}
 
-			res = String.format("%s%s", res.substring(0, commentPos), res.substring(commentEnd + 3));
+			res = res.substring(0, commentPos) + res.substring(commentEnd + 3);
 
 			commentPos = res.indexOf("<!--");
 		}
@@ -268,7 +268,7 @@ public class XmlParser {
 		TagHeaderActions res = TagHeaderActions.NameChar;
 
 		// Checking if it's some form of whitespace
-		if (Character.isWhitespace(c)) {
+		if (Character.isSpace(c)) {
 			res = TagHeaderActions.Space;
 		} else if (c == '<') {
 			res = TagHeaderActions.TagInit;
@@ -379,7 +379,7 @@ public class XmlParser {
 		if (correct) {
 			res = endPos + 1;
 		} else {
-			throw new XmlParseException(String.format("Expecting end tag <%s/>", tagName), pointer);
+			throw new XmlParseException("Expecting end tag <"+ tagName+">", pointer);
 		}
 
 		return res;
@@ -523,7 +523,7 @@ public class XmlParser {
 		AttrActions res = AttrActions.NameChar;
 
 		// Checking if it's some form of whitespace
-		if (Character.isWhitespace(c)) {
+		if (Character.isSpace(c)) {
 			res = AttrActions.Space;
 		}
 		// For this parser '<' and '>' are invalid
