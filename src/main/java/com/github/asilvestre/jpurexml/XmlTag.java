@@ -78,12 +78,20 @@ public class XmlTag {
 			String value = XmlParser.escapeXmlLiteral(attributes.get(key), new String[] { "\"", "'" });
 
 			boolean valueHasDoubleQuotes = value.indexOf("\"") != -1;
-			String attrFormat = valueHasDoubleQuotes ? "%s='%s' " : "%s=\"%s\" ";
-			attrStr += String.format(attrFormat, key, value);
+                        if(valueHasDoubleQuotes) {
+                            attrStr += key + "='"+value+"' ";
+                        }else {
+                            attrStr += key + "=\""+value+"\" ";
+                        }
+			
 		}
 
-		String headerFormat = empty ? "<%s %s/>" : "<%s %s>";
-		res = String.format(headerFormat, XmlParser.escapeXmlLiteral(name, null), attrStr);
+                res = "<" +XmlParser.escapeXmlLiteral(name, null) +" " + attrStr;
+                if(empty) {
+                    res += "/>";
+                } else {
+                    res += ">";
+                }
 
 		// if the header is not empty print its children and ending tag
 		if (!empty) {
@@ -99,10 +107,15 @@ public class XmlTag {
 
 			// Checking if the content has any char that needs to be inside a
 			// CDATA block
-			String procContent = contentHasSpecialChars() ? String.format("<![CDATA[%s]]>", content) : content;
+			String procContent;
+                        if(contentHasSpecialChars()) {
+                            procContent = "<![CDATA[" + content + "]]>";
+                        } else {
+                            procContent = content;
+                        }
 
 			// Adding the ending tag
-			res = String.format("%s%s%s</%s>", res, childrenStr, procContent, XmlParser.escapeXmlLiteral(name, null));
+			res = res + childrenStr + procContent + "</" +XmlParser.escapeXmlLiteral(name, null) + ">";
 		}
 
 		return res;

@@ -32,7 +32,7 @@ public class XmlPrologue {
 
 	@Override
 	public String toString() {
-		String res = String.format("<?xml version=\"%s\" encoding=\"%s\"?>", version, encoding);
+		String res = "<?xml version=\""+version+ "\" encoding=\"" + encoding +"\"?>";
 
 		return res;
 	}

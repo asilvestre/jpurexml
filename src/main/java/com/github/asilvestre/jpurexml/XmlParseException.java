@@ -25,7 +25,7 @@ public class XmlParseException extends Exception{
 
 	public XmlParseException(String msg, int pos)
 	{
-		super(String.format("%s at %d", msg, pos));
+		super(msg + " at " + pos);
 		
 		this.pos = pos;
 	}
