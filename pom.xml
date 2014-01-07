@@ -23,9 +23,9 @@
 	</licenses>
 
 	<scm>
-		<connection>scm:git:antonisilvestre@github.com:asilvestre/jpurexml.git</connection>
-		<developerConnection>scm:git:antonisilvestre@github.com:asilvestre/jpurexml.git</developerConnection>
-		<url>antonisilvestre@github.com:asilvestre/jpurexml.git</url>
+		<connection>scm:git:git@github.com:asilvestre/jpurexml.git</connection>
+		<developerConnection>scm:git:git@github.com:asilvestre/jpurexml.git</developerConnection>
+		<url>git@github.com:asilvestre/jpurexml.git</url>
 	</scm>
 
 	<developers>
